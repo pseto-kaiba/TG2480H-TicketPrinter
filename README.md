@@ -10,6 +10,7 @@ PrinterController pc = new PrinterController("printerConfig.xml");
 
 
 //Create an object of type Ticket one way or another - this is a simple objectified JSON file
+
 Ticket t = ...;
 
 
