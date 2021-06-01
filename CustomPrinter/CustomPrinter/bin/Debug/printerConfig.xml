@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>   
+<COMconfig>
+	<COMPort>COM4</COMPort>
+	<BaudRate>115200</BaudRate>
+</COMconfig>
+<logo>
+	<FileName>raif_mono.png</FileName>
+	<Height>100</Height>
+</logo>
+<ticketHeader>
+	<URL bigger="yes">www.simkela.com</URL>
+	<FullName bigger="no">KLANICA LUKA SIMOVIC SIMKELA PR ETF</FullName>
+	<Name bigger="no">Klanica </Name>
+	<Address bigger="no">KUMANOVSKA 9</Address>
+	<Location bigger="no">BEOGRAD</Location>
+</ticketHeader>
+</config>
