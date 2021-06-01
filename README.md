@@ -4,7 +4,9 @@
 Usage:
 
 
-//Instantiate the printer controller object. The xml config file is mandatory and provides info about the COM port, baudrate, any receipt logo (optional: leave the FileName element blank if you don't want one) and the entire receipt header, with an option to make each line of the header enlargened. Consult the example config file. PrinterController pc = new PrinterController("printerConfig.xml");
+//Instantiate the printer controller object. The xml config file is mandatory and provides info about the COM port, baudrate, any receipt logo (optional: leave the FileName element blank if you don't want one) and the entire receipt header, with an option to make each line of the header enlargened. Consult the example config file.
+
+PrinterController pc = new PrinterController("printerConfig.xml");
 
 
 //Create an object of type Ticket one way or another - this is a simple objectified JSON file
