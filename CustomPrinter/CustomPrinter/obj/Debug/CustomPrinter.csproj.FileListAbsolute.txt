@@ -1,0 +1,6 @@
+C:\Users\Petar\Documents\GitHub\TG2480H-TicketPrinter\CustomPrinter\CustomPrinter\obj\Debug\CustomPrinter.csproj.CoreCompileInputs.cache
+C:\Users\Petar\Documents\GitHub\TG2480H-TicketPrinter\CustomPrinter\CustomPrinter\bin\Debug\CustomPrinter.dll
+C:\Users\Petar\Documents\GitHub\TG2480H-TicketPrinter\CustomPrinter\CustomPrinter\bin\Debug\CustomPrinter.pdb
+C:\Users\Petar\Documents\GitHub\TG2480H-TicketPrinter\CustomPrinter\CustomPrinter\obj\Debug\CustomPrinter.csproj.CopyComplete
+C:\Users\Petar\Documents\GitHub\TG2480H-TicketPrinter\CustomPrinter\CustomPrinter\obj\Debug\CustomPrinter.dll
+C:\Users\Petar\Documents\GitHub\TG2480H-TicketPrinter\CustomPrinter\CustomPrinter\obj\Debug\CustomPrinter.pdb
