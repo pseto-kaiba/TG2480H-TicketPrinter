@@ -16,23 +16,23 @@ namespace CustomPrinter
     [Serializable]
     public class Ticket
     {
-        public string TerminalID { get; set; }
-        public string CardIssuer { get; set; }
-        public string AID { get; set; }
-        public string CardApplicationName { get; set; }
-        public string CardNumber { get; set; }
-        public string TransactionType { get; set; }
-        public string InvoiceNumber { get; set; }
-        public string TransactionDate { get; set; }
-        public string TransactionTime { get; set; }
-        public string RRN { get; set; }
-        public string ApprovalCode { get; set; }
-        public string ResponseCode { get; set; }
-        public string TransactionStatus { get; set; }
-        public string Amount { get; set; }
-        public string EMVData { get; set; }
-        public string InstallmentsNumber { get; set; }
-        public string SignatureLine { get; set; }
+        public string TerminalID { get; set; } = "";
+        public string CardIssuer { get; set; } = "";
+        public string AID { get; set; } = "";
+        public string CardApplicationName { get; set; } = "";
+        public string CardNumber { get; set; } = "";
+        public string TransactionType { get; set; } = "";
+        public string InvoiceNumber { get; set; } = "";
+        public string TransactionDate { get; set; } = "";
+        public string TransactionTime { get; set; } = "";
+        public string RRN { get; set; } = "";
+        public string ApprovalCode { get; set; } = "";
+        public string ResponseCode { get; set; } = "";
+        public string TransactionStatus { get; set; } = "";
+        public string Amount { get; set; } = "";
+        public string EMVData { get; set; } = "";
+        public string InstallmentsNumber { get; set; } = "";
+        public string SignatureLine { get; set; } = "";
     }
 
 
@@ -168,7 +168,7 @@ namespace CustomPrinter
             {
                 ret.COMPortAvailable = false;
                 ret.numPrinterErrors++;
-                ret.printerStatusDesc.Add("COM PORT UNAVAILABLE ERROR");
+                ret.printerStatusDesc.Add("COM PORT ERROR");
             }
 
 
@@ -299,16 +299,11 @@ namespace CustomPrinter
 
         }
 
-        public PrinterStatus Print(Ticket t)
+        public void Print(Ticket t)
         {
-            var status = checkStatus();
-            if (status.numPrinterErrors == 0)
-            {
-                var doc = new PrintDocument();
-                doc.PrintPage += (sender, e) => generatePrintContent(sender, e, t);
-                doc.Print();
-            }
-            return status;
+            var doc = new PrintDocument();
+            doc.PrintPage += (sender, e) => generatePrintContent(sender, e, t);
+            doc.Print();
         }
 
         private void examplePrint(object sender, PrintPageEventArgs e)
@@ -352,9 +347,13 @@ namespace CustomPrinter
 
         public void testPrinter(Image logo=null)
         {
-            var doc = new PrintDocument();
-            doc.PrintPage += (sender, e) => examplePrint(sender, e);
-            doc.Print();
+            var status = checkStatus();
+            if (status.numPrinterErrors == 0)
+            {
+                var doc = new PrintDocument();
+                doc.PrintPage += (sender, e) => examplePrint(sender, e);
+                doc.Print();
+            }
         }
 
     }
